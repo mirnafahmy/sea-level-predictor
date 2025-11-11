@@ -9,7 +9,7 @@ def draw_plot():
     # Create scatter plot
     x = df['Year']
     y = df['CSIRO Adjusted Sea Level']
-    plt.scatter(x, y, alpha=0.5)
+    plt.scatter(x, y, alpha=0.5, color='green')
 
     # Create first line of best fit
     lin = linregress(x, y)
@@ -31,7 +31,7 @@ def draw_plot():
     # Add labels and title
     plt.xlabel("Year")
     plt.ylabel("Sea Level (inches)")
-    plt.set_title("Rise in Sea Level")
+    plt.title("Rise in Sea Level")
     
     # Save plot and return data for testing (DO NOT MODIFY)
     plt.savefig('sea_level_plot.png')
